@@ -10,20 +10,20 @@
 class ond
 {
     public:
-    static int ReadTR7wf(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2);
-    static int ReadTR7wf(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2, double start, double end);
-    static int ReadTR7wf(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1);
-    static int ReadTR7wf(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, double start, double end);
-    static int ReadTR7wf_bt(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2);
-    static int ReadTR7wf_bt(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2, double start, double end);
-    static int ReadTR7wf_bt(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1);
-    static int ReadTR7wf_bt(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, double start, double end);
+    static int ReadTR7(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2);
+    static int ReadTR7(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2, double start, double end);
+    static int ReadTR7(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1);
+    static int ReadTR7(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, double start, double end);
+    static int ReadTR7_bt(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2);
+    static int ReadTR7_bt(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2, double start, double end);
+    static int ReadTR7_bt(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1);
+    static int ReadTR7_bt(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, double start, double end);
     static int ReadTR73U(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2, std::vector<double>& v_ch3);
     static int ReadTR73U(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2, std::vector<double>& v_ch3, double start, double end);
     static void SetFormat(TGraph *g, Color_t color, Float_t alpha, std::string title = "", std::string TimeFormat = "#splitline{%m/%d}{%H:%M}", double TimeOffset = 9*3600);
 };
 
-inline int ond::ReadTR7wf(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2){
+inline int ond::ReadTR7(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2){
     double time, ch1, ch2;
     int y, m, d, hh, mm, ss;
 
@@ -54,7 +54,7 @@ inline int ond::ReadTR7wf(std::string file, std::vector<double>& v_time, std::ve
     return v_time.size();
 }
 
-inline int ond::ReadTR7wf(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2, double start, double end){
+inline int ond::ReadTR7(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2, double start, double end){
     double time, ch1, ch2;
     int y, m, d, hh, mm, ss;
 
@@ -87,7 +87,7 @@ inline int ond::ReadTR7wf(std::string file, std::vector<double>& v_time, std::ve
     return v_time.size();
 }
 
-inline int ond::ReadTR7wf(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1){
+inline int ond::ReadTR7(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1){
     double time, ch1;
     int y, m, d, hh, mm, ss;
 
@@ -117,7 +117,7 @@ inline int ond::ReadTR7wf(std::string file, std::vector<double>& v_time, std::ve
     return v_time.size();
 }
 
-inline int ond::ReadTR7wf(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, double start, double end){
+inline int ond::ReadTR7(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, double start, double end){
     double time, ch1;
     int y, m, d, hh, mm, ss;
 
@@ -149,7 +149,7 @@ inline int ond::ReadTR7wf(std::string file, std::vector<double>& v_time, std::ve
     return v_time.size();
 }
 
-inline int ond::ReadTR7wf_bt(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2){
+inline int ond::ReadTR7_bt(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2){
     double time, ch1, ch2;
     int y, m, d, hh, mm, ss;
 
@@ -180,7 +180,7 @@ inline int ond::ReadTR7wf_bt(std::string file, std::vector<double>& v_time, std:
     return v_time.size();
 }
 
-inline int ond::ReadTR7wf_bt(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2, double start, double end){
+inline int ond::ReadTR7_bt(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2, double start, double end){
     double time, ch1, ch2;
     int y, m, d, hh, mm, ss;
 
@@ -213,7 +213,7 @@ inline int ond::ReadTR7wf_bt(std::string file, std::vector<double>& v_time, std:
     return v_time.size();
 }
 
-inline int ond::ReadTR7wf_bt(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1){
+inline int ond::ReadTR7_bt(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1){
     double time, ch1;
     int y, m, d, hh, mm, ss;
 
@@ -243,7 +243,7 @@ inline int ond::ReadTR7wf_bt(std::string file, std::vector<double>& v_time, std:
     return v_time.size();
 }
 
-inline int ond::ReadTR7wf_bt(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, double start, double end){
+inline int ond::ReadTR7_bt(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, double start, double end){
     double time, ch1;
     int y, m, d, hh, mm, ss;
 

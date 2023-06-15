@@ -17,7 +17,7 @@ void sample(){
     vector<double> v_temp1;
     vector<double> v_humi1;
 
-    int cnt1 = ond::ReadTR7wf(file, v_time1, v_temp1, v_humi1);
+    int cnt1 = ond::ReadTR7(file, v_time1, v_temp1, v_humi1);
 
     TGraph *g_temp1 = new TGraph(cnt1, v_time1.data(), v_temp1.data());
     ond::SetFormat(g_temp1, kRed, 1, "sample1;;Temperature[#circC]");
@@ -42,7 +42,7 @@ void sample(){
     vector<double> v_temp2;
     vector<double> v_humi2;
 
-    int cnt2 = ond::ReadTR7wf(file, v_time2, v_temp2, v_humi2, time_start, time_end);
+    int cnt2 = ond::ReadTR7(file, v_time2, v_temp2, v_humi2, time_start, time_end);
 
     TGraph *g_temp2 = new TGraph(cnt2, v_time2.data(), v_temp2.data());
     ond::SetFormat(g_temp2, kRed, 1, "sample2;;Temperature[#circC]");
