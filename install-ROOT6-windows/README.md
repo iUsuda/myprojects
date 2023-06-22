@@ -2,7 +2,7 @@
 ver6.26.02以降64bitのROOT6がwindowsに対応している。(WSLを用いなくてもwindows上で64bitで動く！)
 
 ## 1. Visual Studio 2022のダウンロード
-**Warning** Visual Studioのインストールに15~20GBの空き容量が必要
+**注意** Visual Studioのインストールに15~20GBの空き容量が必要
 1. https://visualstudio.microsoft.com/ja/downloads/ よりVisual Studio 2022をダウンロードする。**Communityでよい。**
 2.  ダウンロードを押すとVisualStudioSetup.exeがダウンロードされるので実行する。
 3. 下の画面までいけたら「C++によるデスクトップ開発」にチェックを入れ、(それ以外は何でもいい)右下のインストールを実行。インストールには十分程度かかる。
@@ -57,4 +57,4 @@ root [0]
     これでコマンドプロンプトを開くたびに「SetEnv.bat」が呼び出される
 
 ## 追伸
-公式サイトのインストール方法(https://root.cern/install/)を読むと、CMakeやPythonも入れなければならないと書いてある。CMakeは無くても動いている。Pythonが無い場合は未検証。
+公式サイトのインストール方法(https://root.cern/install/) を読むと、CMakeやPythonも入れなければならないと書いてある。CMakeは無くても動いている。Pythonが無い場合は未検証。
