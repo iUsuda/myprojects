@@ -42,10 +42,10 @@
 ## ReadTR73U
 対応機種：TR73U
 吸い出し方：USB接続(T&D Recorder for windows)
-- int ReadTR73U(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2, std::vector<double>& v_ch3)
-  - ch1、ch2、ch3の記録値を全て取得し、vectorに詰める
-- int ReadTR73U(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2, std::vector<double>& v_ch3, double start, double end)
-  - ch1, ch2の記録値のうち、指定の時間範囲のもののみvectorに詰める
+- int ReadTR73U(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch3)
+  - ch1、ch3の記録値を全て取得し、vectorに詰める
+- int ReadTR73U(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch3, double start, double end)
+  - ch1, ch3の記録値のうち、指定の時間範囲のもののみvectorに詰める
 
 戻り値は全てデータ数
 
