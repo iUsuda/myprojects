@@ -22,6 +22,7 @@ ver6.26.02以降64bitのROOT6がwindowsに対応している。(WSLを用いな�
 4. 「root」というフォルダの中にファイルが入っている状態になるが、バージョン情報がわからなくなるので「root_v6.??.??」に名前を変えておく。
 
 ## 3. PATHを通す
+- visual studio開発者用コマンドプロンプト(C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat)で実行する。(ノーマルコマンドプロンプトでも動く)
 - 単純に使うだけであればシステム環境変数に「C:¥root_v6.??.??¥bin」を追加すれば良い。
 
 - ROOT5とROOT6が共存するような環境では上記のやり方が使えない。「C:¥root_v6.??.??¥bin¥thisroot.bat」を実行するとPATHが追加される。
@@ -58,9 +59,10 @@ root [0]
   - 「SetEnv.bat」の中身を以下のようにして、SetEnv.bat自体を実行すれば良い。
     ```
     @echo off
+    call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
     call C:¥root_v6.26.02¥bin¥thisroot.bat
     cmd /k
     ```
 
 ## 追伸
-公式サイトのインストール方法(https://root.cern/install/) を読むと、CMakeやPythonも入れなければならないと書いてある。CMakeは無くても動いている。Pythonが無い場合は未検証。
+公式サイトのインストール方法(https://root.cern/install/) を読むと、CMakeやPythonも入れなければならないと書いてある。(CMakeはソースコードからビルドする場合のみ必要らしい？)Pythonが無い場合は未検証。
