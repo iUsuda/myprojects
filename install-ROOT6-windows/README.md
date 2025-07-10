@@ -59,7 +59,7 @@ root [0]
   - 「SetEnv.bat」の中身を以下のようにして、SetEnv.bat自体を実行すれば良い。
     ```
     @echo off
-    call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
+    call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat" <-なくてもいいかも
     call C:¥root_v6.26.02¥bin¥thisroot.bat
     cmd /k
     ```
