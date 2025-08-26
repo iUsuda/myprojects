@@ -10,7 +10,7 @@
 ターミナルで`root -l -q -b sample.cpp`を実行すると、sample1.pdf、sample2.pdfが出力される。
 
 ## ReadTR7
-対応機種：TR7シリーズ  
+対応機種：TR7シリーズ(ch1: 温度℃、ch2: 湿度%RH)  
 吸い出し方：おんどとりWeb Storage、USB接続(TR7 for Windows)
 
 - int ReadTR7(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2)  
@@ -25,7 +25,7 @@
 戻り値は全てデータ数
 
 ## ReadTR7_bt
-対応機種：TR7シリーズ  
+対応機種：TR7シリーズ(ch1: 温度℃、ch2: 湿度%RH)  
 吸い出し方：Bluetooth(T&D Thermo)
 
 - int ReadTR7_bt(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch2)  
@@ -40,7 +40,7 @@
 戻り値は全てデータ数
 
 ## ReadTR73U
-対応機種：TR73U
+対応機種：TR73U(ch1: 温度℃、ch2: 湿度%RH、ch3: 気圧hPa)  
 吸い出し方：USB接続(T&D Recorder for windows)
 - int ReadTR73U(std::string file, std::vector<double>& v_time, std::vector<double>& v_ch1, std::vector<double>& v_ch3)
   - ch1、ch3の記録値を全て取得し、vectorに詰める
